@@ -3,6 +3,13 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
+const { createClient } = require('@supabase/supabase-js');
+
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_SECRET_KEY
+);
+
 const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
 const LOG_FILE = path.join(__dirname, 'pagamentos.txt');
@@ -43,7 +50,7 @@ const server = http.createServer((req, res) => {
       if (body.length > 10_000) req.destroy();
     });
 
-    req.on('end', () => {
+    req.on('end', async () => {
       try {
         const data = JSON.parse(body || '{}');
         const nome = String(data.nome || '').trim();
@@ -70,8 +77,23 @@ const server = http.createServer((req, res) => {
           ''
         ].join('\n');
 
-        fs.appendFileSync(LOG_FILE, linha, 'utf8');
-        return sendJson(res, 200, { ok: true, id });
+        const { error } = await supabase
+  .from('pagamentos')
+  .insert({
+    nome: nome,
+    valor: valor,
+    data: new Date().toISOString()
+  });
+
+if (error) {
+  console.error('Erro Supabase:', error);
+  return sendJson(res, 500, {
+    ok: false,
+    erro: 'Erro ao guardar pagamento.'
+  });
+}
+
+return sendJson(res, 200, { ok: true, id });
       } catch {
         return sendJson(res, 400, { ok: false, erro: 'Pedido inválido.' });
       }
