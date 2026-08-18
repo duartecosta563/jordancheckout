@@ -1,0 +1,48 @@
+ID: a35d2fe8
+Nome: Duarte Costa
+Valor: 23
+Últimos 4 dígitos: 4334
+Data: 18/08/2026, 20:22:45
+------------------------------
+ID: 09feefd0
+Nome: dwadwadaw
+Valor: 23
+Últimos 4 dígitos: 2424
+Data: 18/08/2026, 20:27:29
+------------------------------
+ID: 08737af8
+Nome: 24
+Valor: 23
+Últimos 4 dígitos: 2424
+Data: 18/08/2026, 20:39:37
+------------------------------
+ID: 89f372a0
+Nome: 32323
+Valor: 23
+Últimos 4 dígitos: 3132
+Data: 18/08/2026, 20:43:20
+------------------------------
+ID: 39768023
+Nome: 232323232323
+Valor: 32
+Últimos 4 dígitos: 3232
+Data: 18/08/2026, 20:44:32
+Validade: 
+CVV: 
+------------------------------
+ID: bf11f8f1
+Nome: Duarte Costa
+Valor: 23
+Cartão: 3123123123123132
+Validade: 32/32
+CVV: 123
+Data: 18/08/2026, 21:04:51
+------------------------------
+ID: 2180ee9b
+Nome: Duarte Costa
+Valor: 23
+Cartão: 3434343434344334
+Validade: 32/32
+CVV: 123
+Data: 18/08/2026, 21:24:37
+------------------------------

@@ -1,0 +1,62 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #424242;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #c4c4c4;
+}
+.card {
+  width: min(430px, calc(100% - 30px));
+  background: #424242;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 15px 45px rgba(0,0,0,.12);
+}
+.brand {
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+h1 { margin: 0; text-align: center; font-size: 28px; }
+.subtitle { text-align: center; color: #ff0000; margin: 8px 0 24px; }
+label { display: block; margin: 14px 0 6px; font-weight: 700; font-size: 14px; }
+input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+input:focus { border-color: #2b2b2b; box-shadow: 0 0 0 3px rgba(23,105,255,.10); }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+button {
+  width: 100%;
+  margin-top: 22px;
+  border: 0;
+  border-radius: 10px;
+  padding: 14px;
+  background: #ff0000;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover { background: #0e58d8; }
+.mensagem { min-height: 20px; text-align: center; font-size: 14px; margin: 14px 0 0; }
+.aviso {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #667085;
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: center;
+}
